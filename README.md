@@ -522,14 +522,23 @@ GIT
 Packages needed :
 
 rg
+
 ripgrep
+
 clang
+
 clang-tools-extra
+
 gcc
+
 gdb
+
 python
+
 pyright
+
 ruff
+
 
 ---------------------------------------------------------------------------------------------------------
 
