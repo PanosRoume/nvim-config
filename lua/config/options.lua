@@ -15,3 +15,5 @@ vim.opt.smartcase = true
 vim.opt.cursorline = true
 
 vim.opt.termguicolors = true
+
+vim.opt.signcolumn = "yes"
