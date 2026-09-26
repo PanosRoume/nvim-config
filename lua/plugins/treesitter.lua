@@ -9,6 +9,7 @@ return {
 
             require("nvim-treesitter").install({
                 "c",
+                "python"
             })
         end,
     },

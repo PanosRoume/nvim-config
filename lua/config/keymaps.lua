@@ -23,7 +23,9 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
 })
 
 vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
+    require("conform").format({
+        lsp_fallback = true,
+    })
 end, {
     desc = "Format buffer",
 })
@@ -96,4 +98,10 @@ vim.keymap.set("n", "<leader>gu", function()
     require("gitsigns").reset_hunk()
 end, {
     desc = "Git: Reset Hunk",
+})
+
+vim.keymap.set("n", "<leader>d", function()
+    vim.diagnostic.open_float()
+end, {
+    desc = "Show diagnostic",
 })
