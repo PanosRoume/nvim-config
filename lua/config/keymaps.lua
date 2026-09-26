@@ -57,3 +57,39 @@ vim.keymap.set("n", "<leader>do", function()
 end, {
     desc = "Debug: Step Out",
 })
+
+vim.keymap.set("n", "<leader>gp", function()
+    require("gitsigns").preview_hunk()
+end, {
+    desc = "Git: Preview Hunk",
+})
+
+vim.keymap.set("n", "<leader>gn", function()
+    require("gitsigns").next_hunk()
+end, {
+    desc = "Git: Next Hunk",
+})
+
+vim.keymap.set("n", "<leader>gN", function()
+    require("gitsigns").prev_hunk()
+end, {
+    desc = "Git: Previous Hunk",
+})
+
+vim.keymap.set("n", "<leader>gb", function()
+    require("gitsigns").blame_line()
+end, {
+    desc = "Git: Blame Line",
+})
+
+vim.keymap.set("n", "<leader>gs", function()
+    require("gitsigns").stage_hunk()
+end, {
+    desc = "Git: Stage Hunk",
+})
+
+vim.keymap.set("n", "<leader>gu", function()
+    require("gitsigns").reset_hunk()
+end, {
+    desc = "Git: Reset Hunk",
+})
