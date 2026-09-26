@@ -7,7 +7,14 @@ The goal is **not** to use a giant pre-made configuration, but to understand wha
 Currently focused on **C/C++ and Python**, with support for Git, debugging, LSP, completion, formatting, project search, and file management.
 
 
----------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------ripgrep	Telescope live grep (<Space>fg)
+clang	C compiler + clang-format
+clang-tools-extra	clangd LSP
+gcc	C compilation
+gdb	C debugging through DAP
+python	Python itself
+python-pyright	Python LSP/type checking
+ruff	Python formatting------------
 
 ## 🛠️ Current Stack
 
@@ -509,6 +516,20 @@ GIT
 | Space gs      |         Stage hunk      |
 | Space gu      |         Reset hunk      |
 -------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+
+Packages needed :
+
+rg
+ripgrep
+clang
+clang-tools-extra
+gcc
+gdb
+python
+pyright
+ruff
 
 ---------------------------------------------------------------------------------------------------------
 
