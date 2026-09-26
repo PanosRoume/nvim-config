@@ -463,9 +463,9 @@ The configuration will continue to be built **one piece at a time** rather than 
 
 
 SEARCH
-Space ff       Find files
-Space fg       Live grep
-Space e        File tree
+| Space ff   |    Find files      |
+| Space fg   |    Live grep      |
+| Space e    |    File tree      |
 
 LSP
 K              Hover / documentation
