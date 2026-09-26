@@ -472,49 +472,73 @@ The configuration will continue to be built **one piece at a time** rather than 
 SEARCH
 
 
-| Key          | Action             |
+| Key          | Action           |
+
 ----------------------------------
 | Space ff   |    Find files     |
+
 | Space fg   |    Live grep      |
+
 | Space e    |    File tree      |
+
 ----------------------------------
 
 LSP
 
 
 | Key          | Action             |
+
 --------------------------------------
 | K          |  Hover / documentation |
+
 | gd         |    Go to definition    |
+
 | gr         |    Find references     |
+
 | Space rn   |       Rename           |
+
 | Space d    |    Show diagnostic     |
+
 | Space f    |        Format          |
+
 ---------------------------------------
 
 DEBUG
 
 
 | Key          | Action             |
+
 -----------------------------------------------
 | Space dc      |       Continue / start      |
+
 | Space db      |       Toggle breakpoint     |
+
 | Space dn      |           Step over         |
+
 | Space di      |           Step into         |
+
 | Space do      |            Step out         |
+
 -----------------------------------------------
 
 GIT
 
 
 | Key          | Action             |
+
 -------------------------------------------
 | Space gp      |        Preview hunk     |
+
 | Space gn      |         Next hunk       |
+
 | Space gN      |        Previous hunk    |
+
 | Space gb      |         Blame line      |
+
 | Space gs      |         Stage hunk      |
+
 | Space gu      |         Reset hunk      |
+
 -------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------
