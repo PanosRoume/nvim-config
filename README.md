@@ -463,32 +463,44 @@ The configuration will continue to be built **one piece at a time** rather than 
 
 
 SEARCH
-| Space ff   |    Find files      |
+
+----------------------------------
+| Space ff   |    Find files     |
 | Space fg   |    Live grep      |
 | Space e    |    File tree      |
+----------------------------------
 
 LSP
-K              Hover / documentation
-gd             Go to definition
-gr             Find references
-Space rn       Rename
-Space d        Show diagnostic
-Space f        Format
+
+--------------------------------------
+| K          |  Hover / documentation |
+| gd         |    Go to definition    |
+| gr         |    Find references     |
+| Space rn   |       Rename           |
+| Space d    |    Show diagnostic     |
+| Space f    |        Format          |
+---------------------------------------
 
 DEBUG
-Space dc       Continue / start
-Space db       Toggle breakpoint
-Space dn       Step over
-Space di       Step into
-Space do       Step out
+
+-----------------------------------------------
+| Space dc      |       Continue / start      |
+| Space db      |       Toggle breakpoint     |
+| Space dn      |           Step over         |
+| Space di      |           Step into         |
+| Space do      |            Step out         |
+-----------------------------------------------
 
 GIT
-Space gp       Preview hunk
-Space gn       Next hunk
-Space gN       Previous hunk
-Space gb       Blame line
-Space gs       Stage hunk
-Space gu       Reset hunk
+
+-------------------------------------------
+| Space gp      |        Preview hunk     |
+| Space gn      |         Next hunk       |
+| Space gN      |        Previous hunk    |
+| Space gb      |         Blame line      |
+| Space gs      |         Stage hunk      |
+| Space gu      |         Reset hunk      |
+-------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------
 
