@@ -464,6 +464,8 @@ The configuration will continue to be built **one piece at a time** rather than 
 
 SEARCH
 
+
+| Key          | Action             |
 ----------------------------------
 | Space ff   |    Find files     |
 | Space fg   |    Live grep      |
@@ -472,6 +474,8 @@ SEARCH
 
 LSP
 
+
+| Key          | Action             |
 --------------------------------------
 | K          |  Hover / documentation |
 | gd         |    Go to definition    |
@@ -483,6 +487,8 @@ LSP
 
 DEBUG
 
+
+| Key          | Action             |
 -----------------------------------------------
 | Space dc      |       Continue / start      |
 | Space db      |       Toggle breakpoint     |
@@ -493,6 +499,8 @@ DEBUG
 
 GIT
 
+
+| Key          | Action             |
 -------------------------------------------
 | Space gp      |        Preview hunk     |
 | Space gn      |         Next hunk       |
