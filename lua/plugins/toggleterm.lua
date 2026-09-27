@@ -3,7 +3,8 @@ return {
         "akinsho/toggleterm.nvim",
 
         opts = {
-            direction = "float",
+            direction = "horizontal",
+            size = 15,
         },
     },
 }

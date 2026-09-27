@@ -126,7 +126,7 @@ local function run_current_file()
 
         require("toggleterm.terminal").Terminal:new({
             cmd = command,
-            direction = "float",
+            direction = "horizontal",
             close_on_exit = false,
         }):toggle()
 
@@ -142,7 +142,7 @@ local function run_current_file()
 
         require("toggleterm.terminal").Terminal:new({
             cmd = command,
-            direction = "float",
+            direction = "horizontal",
             close_on_exit = false,
         }):toggle()
 
@@ -154,7 +154,7 @@ local function run_current_file()
 
         require("toggleterm.terminal").Terminal:new({
             cmd = command,
-            direction = "float",
+            direction = "horizontal",
             close_on_exit = false,
         }):toggle()
 
@@ -165,4 +165,38 @@ end
 
 vim.keymap.set("n", "<leader>r", run_current_file, {
     desc = "Run current file",
+})
+
+vim.keymap.set("n", "<leader>o", "<cmd>AerialToggle!<CR>", {
+    desc = "Toggle code outline",
+})
+
+-- Navigate between side panels and the editor
+vim.keymap.set("n", "<M-Left>", "<C-w>h", {
+    desc = "Move to left window",
+})
+
+vim.keymap.set("n", "<M-Right>", "<C-w>l", {
+    desc = "Move to right window",
+})
+
+-- Enter the terminal below
+vim.keymap.set("n", "<M-Down>", function()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.bo[buf].filetype == "toggleterm" then
+            vim.api.nvim_set_current_win(win)
+            vim.cmd("startinsert")
+            return
+        end
+    end
+
+    print("No terminal is open")
+end, {
+    desc = "Enter terminal",
+})
+
+-- Leave the terminal
+vim.keymap.set("t", "<M-Up>", [[<C-\><C-n><C-w>k]], {
+    desc = "Leave terminal",
 })
