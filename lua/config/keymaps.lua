@@ -105,3 +105,64 @@ vim.keymap.set("n", "<leader>d", function()
 end, {
     desc = "Show diagnostic",
 })
+
+vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", {
+    desc = "Toggle terminal",
+})
+
+local function run_current_file()
+    local file = vim.fn.expand("%:p")
+    local filetype = vim.bo.filetype
+
+    if filetype == "c" then
+        local output = vim.fn.expand("%:p:r")
+
+        local command = string.format(
+            "gcc %s -o %s && %s",
+            vim.fn.shellescape(file),
+            vim.fn.shellescape(output),
+            vim.fn.shellescape(output)
+        )
+
+        require("toggleterm.terminal").Terminal:new({
+            cmd = command,
+            direction = "float",
+            close_on_exit = false,
+        }):toggle()
+
+    elseif filetype == "cpp" then
+        local output = vim.fn.expand("%:p:r")
+
+        local command = string.format(
+            "g++ %s -o %s && %s",
+            vim.fn.shellescape(file),
+            vim.fn.shellescape(output),
+            vim.fn.shellescape(output)
+        )
+
+        require("toggleterm.terminal").Terminal:new({
+            cmd = command,
+            direction = "float",
+            close_on_exit = false,
+        }):toggle()
+
+    elseif filetype == "python" then
+        local command = string.format(
+            "python3 %s",
+            vim.fn.shellescape(file)
+        )
+
+        require("toggleterm.terminal").Terminal:new({
+            cmd = command,
+            direction = "float",
+            close_on_exit = false,
+        }):toggle()
+
+    else
+        print("No run command configured for filetype: " .. filetype)
+    end
+end
+
+vim.keymap.set("n", "<leader>r", run_current_file, {
+    desc = "Run current file",
+})
